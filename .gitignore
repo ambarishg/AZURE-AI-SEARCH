@@ -1,5 +1,5 @@
 ACTUAL_CONFIGS
 __pycache__
 DOCS
-azureaisearch_env
+.venv
 BLANK_CONFIGS
