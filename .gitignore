@@ -1,6 +1,5 @@
 config_openai_.py
 config_.py
-azureaisearch_env
 __pycache__
 DOCS
-
+azureaisearch_env
