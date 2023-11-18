@@ -19,8 +19,7 @@ import streamlit as st
 st.header('Search Engine - Document')
 
 user_input = st.text_input('Enter your question here:', 
-                           'What is Diploblastic and \
-                           Triploblastic Organisation ?')
+                           'What is Diploblastic and Triploblastic Organisation ?')
 
 if st.button('Submit'):
 
