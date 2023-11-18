@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: validators
+Version: 0.22.0
+Summary: Python Data Validation for Humans™
+Author-email: Konsta Vesterinen <konsta@fastmonkeys.com>
+License: MIT
+Project-URL: Homepage, https://python-validators.github.io/validators
+Project-URL: Documentation, https://python-validators.github.io/validators
+Project-URL: Repository, https://github.com/python-validators/validators
+Project-URL: Changelog, https://github.com/python-validators/validators/blob/master/CHANGES.md
+Keywords: validation,validator,python-validator
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: docs-offline
+Requires-Dist: myst-parser >=2.0.0 ; extra == 'docs-offline'
+Requires-Dist: pypandoc-binary >=1.11 ; extra == 'docs-offline'
+Requires-Dist: sphinx >=7.1.1 ; extra == 'docs-offline'
+Provides-Extra: docs-online
+Requires-Dist: mkdocs >=1.5.2 ; extra == 'docs-online'
+Requires-Dist: mkdocs-git-revision-date-localized-plugin >=1.2.0 ; extra == 'docs-online'
+Requires-Dist: mkdocs-material >=9.2.6 ; extra == 'docs-online'
+Requires-Dist: mkdocstrings[python] >=0.22.0 ; extra == 'docs-online'
+Requires-Dist: pyaml >=23.7.0 ; extra == 'docs-online'
+Provides-Extra: hooks
+Requires-Dist: pre-commit >=3.3.3 ; extra == 'hooks'
+Provides-Extra: package
+Requires-Dist: build >=1.0.0 ; extra == 'package'
+Requires-Dist: twine >=4.0.2 ; extra == 'package'
+Provides-Extra: runner
+Requires-Dist: tox >=4.11.1 ; extra == 'runner'
+Provides-Extra: sast
+Requires-Dist: bandit[toml] >=1.7.5 ; extra == 'sast'
+Provides-Extra: testing
+Requires-Dist: pytest >=7.4.0 ; extra == 'testing'
+Provides-Extra: tooling
+Requires-Dist: black >=23.7.0 ; extra == 'tooling'
+Requires-Dist: ruff >=0.0.287 ; extra == 'tooling'
+Requires-Dist: pyright >=1.1.325 ; extra == 'tooling'
+Provides-Extra: tooling-extras
+Requires-Dist: pyaml >=23.7.0 ; extra == 'tooling-extras'
+Requires-Dist: pypandoc-binary >=1.11 ; extra == 'tooling-extras'
+Requires-Dist: pytest >=7.4.0 ; extra == 'tooling-extras'
+
+# validators - Python Data Validation for Humans™
+
+[![PyCQA][pycqa-badge]][pycqa-link] [![SAST][sast-badge]][sast-link] [![Docs][docs-badge]][docs-link] [![Version][vs-badge]][vs-link] [![Downloads][dw-badge]][dw-link]
+
+<!-- [![Package][package-badge]][package-link] -->
+
+Python has all kinds of data validation tools, but every one of them seems to
+require defining a schema or form. I wanted to create a simple validation
+library where validating a simple value does not require defining a form or a
+schema.
+
+```python
+>>> import validators
+>>> 
+>>> validators.email('someone@example.com')
+True
+```
+
+## Resources
+
+- [Documentation](https://python-validators.github.io/validators/)
+- [Bugtracker](https://github.com/python-validators/validators/issues)
+- [Security](https://github.com/python-validators/validators/blob/master/SECURITY.md)
+- [Code](https://github.com/python-validators/validators/)
+
+[//]: #(Links)
+[sast-badge]: https://github.com/python-validators/validators/actions/workflows/sast.yaml/badge.svg
+[sast-link]: https://github.com/python-validators/validators/actions/workflows/sast.yaml
+[pycqa-badge]: https://github.com/python-validators/validators/actions/workflows/pycqa.yaml/badge.svg
+[pycqa-link]: https://github.com/python-validators/validators/actions/workflows/pycqa.yaml
+[docs-badge]: https://github.com/python-validators/validators/actions/workflows/docs.yaml/badge.svg
+[docs-link]: https://github.com/python-validators/validators/actions/workflows/docs.yaml
+[vs-badge]: https://img.shields.io/pypi/v/validators?logo=pypi&logoColor=white&label=version&color=blue
+[vs-link]: https://pypi.python.org/pypi/validators/
+[dw-badge]: https://img.shields.io/pypi/dm/validators?logo=pypi&logoColor=white&color=blue
+[dw-link]: https://pypi.python.org/pypi/validators/
+
+<!-- [package-badge]: https://github.com/python-validators/validators/actions/workflows/package.yaml/badge.svg
+[package-link]: https://github.com/python-validators/validators/actions/workflows/package.yaml -->
