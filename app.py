@@ -53,11 +53,17 @@ if st.button('Submit'):
                             query_language="en-us", 
                             query_speller="lexicon", 
                             semantic_configuration_name="default", 
-                            top=5)
+                            top=3)
     results = [doc[KB_FIELDS_SOURCEPAGE] + ": " + doc[KB_FIELDS_CONTENT].replace("\n", "").replace("\r", "") for doc in r]
     content = "\n".join(results)
 
-    conversation=[{"role": "system", "content": "Assistant est un grand modèle de langage formé par OpenAI."}]
+    references =[]
+    for result in results:
+        references.append(result.split(":")[0])
+    st.write("References:")
+    st.write(" , ".join(set(references)))
+
+    conversation=[{"role": "system", "content": "Assistant is a great language model formed by OpenAI."}]
     prompt = create_prompt(content,user_input)            
     conversation.append({"role": "assistant", "content": prompt})
     conversation.append({"role": "user", "content": user_input})
