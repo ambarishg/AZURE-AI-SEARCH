@@ -1,5 +1,4 @@
-ACTUAL_CONFIGS
+.env
 __pycache__
 DOCS
 .venv
-BLANK_CONFIGS

@@ -60,7 +60,7 @@ if st.button('Submit'):
     references =[]
     for result in results:
         references.append(result.split(":")[0])
-    st.write("References:")
+    st.markdown("### References:")
     st.write(" , ".join(set(references)))
 
     conversation=[{"role": "system", "content": "Assistant is a great language model formed by OpenAI."}]
@@ -69,5 +69,6 @@ if st.button('Submit'):
     conversation.append({"role": "user", "content": user_input})
     reply = generate_answer(conversation)
 
+    st.markdown("### Answer is:")
     st.write(reply)
 
