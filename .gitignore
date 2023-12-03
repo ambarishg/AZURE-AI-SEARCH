@@ -1,4 +1,6 @@
 .env
 __pycache__
 DOCS
-.venv
+DOCS2 
+.venv311
+read-decompose-ask.ipynb
