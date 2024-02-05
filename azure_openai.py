@@ -9,7 +9,7 @@ client = AzureOpenAI(
 )
 
 def create_prompt(context,query):
-    header = "What is Diploblastic and Triploblastic Organisation"
+    header = "What is a data lake storage account?"
     return header + context + "\n\n" + query + "\n"
 
 

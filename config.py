@@ -11,6 +11,9 @@ index = values_env['index']
 searchkey = values_env['searchkey']
 category=values_env['category']
 
+print(searchservice)
+print(index)
+
 #AZURE STORAGE CONFIGURATION
 storageaccount  = values_env['storageaccount']
 container=values_env['container']
