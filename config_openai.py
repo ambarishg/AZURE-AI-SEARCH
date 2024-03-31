@@ -2,14 +2,9 @@ from dotenv import load_dotenv,dotenv_values
 
 
 load_dotenv()
+values_env_openai = dotenv_values(".env")
 
-# deployement_id with a model without a private end point 
-values_env_openai = dotenv_values(".env2")
-
-# deployement_id with a model with a private end point
-#values_env_openai = dotenv_values(".env")
-
-key = values_env_openai['KEY']
-location = values_env_openai['LOCATION']
-endpoint = values_env_openai['ENDPOINT']
-deployment_id=values_env_openai['DEPLOYMENT_ID']  
+key = values_env_openai['key']
+location = values_env_openai['location']
+endpoint = values_env_openai['endpoint']
+deployment_id_gpt4=values_env_openai['deployment_id_gpt4']  
