@@ -1,0 +1,4 @@
+KEY="d6bcc40e68fc4119abcd43b4661dc8e3"
+ENDPOINT="https://openaidemos007.openai.azure.com/"
+LOCATION="eastus"
+DEPLOYMENT_ID="gpt35"
